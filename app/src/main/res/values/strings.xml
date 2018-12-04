@@ -14,4 +14,5 @@
 
     <!-- For Mother Layout-->
     <string name="your_point">your v-points</string>
+    <string name="settings">Settings</string>
 </resources>

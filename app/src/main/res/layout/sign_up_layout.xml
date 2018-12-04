@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:gravity="center_horizontal"
-            android:text="Create an Account"
+            android:text="@string/create_an_account"
             android:textColor="@color/purple"
             android:textSize="36sp" />
 
@@ -30,7 +30,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/textview_border"
             android:ems="10"
-            android:hint="Full Name"
+            android:hint="@string/full_name"
             android:inputType="textPersonName" />
 
         <EditText
@@ -42,7 +42,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/textview_border"
             android:ems="10"
-            android:hint="Email Adress"
+            android:hint="@string/email"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -54,7 +54,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/textview_border"
             android:ems="10"
-            android:hint="Password"
+            android:hint="@string/password"
             android:inputType="textPassword" />
 
         <EditText
@@ -66,7 +66,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/textview_border"
             android:ems="10"
-            android:hint="Confirm Password"
+            android:hint="@string/confirm_password"
             android:inputType="textPassword" />
 
         <TextView
@@ -75,7 +75,7 @@
             android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
             android:paddingBottom="20dp"
-            android:text="By creating an accout you agree to our Terms of Service and Privacy Policy"
+            android:text="@string/terms_and_service"
             android:textColor="@color/purple"
             android:textSize="20sp" />
 
@@ -101,7 +101,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/continue_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="18dp"
@@ -109,7 +109,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:background="@color/purple"
-            android:text="CONTINUE"
+            android:text="@string/continue_button"
             android:textColor="@android:color/white"/>
     </LinearLayout>
 </ScrollView>
