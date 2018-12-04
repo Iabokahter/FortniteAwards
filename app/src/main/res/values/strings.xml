@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">FortniteAwards</string>
+
+    <string name="create_an_account">Create an Account</string>
+
+    <!-- For Sign-Up Layout-->
+    <string name="full_name">Full Name</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="terms_and_service">By creating an accout you agree to our Terms of Service and Privacy Policy</string>
+    <string name="continue_button">Continue</string>
+
+
+    <!-- For Mother Layout-->
+    <string name="your_point">your v-points</string>
 </resources>
