@@ -5,7 +5,7 @@
 
     <!-- For Sign-Up Layout-->
     <string name="full_name">Full Name</string>
-    <string name="email">Email Address</string>
+    <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="terms_and_service">By creating an accout you agree to our Terms of Service and Privacy Policy</string>
@@ -15,4 +15,41 @@
     <!-- For Mother Layout-->
     <string name="your_point">your v-points</string>
     <string name="settings">Settings</string>
+    
+    <!-- For Settings Layout -->
+    <string name="account">Account</string>
+    <string name="theme">Theme</string>
+    <string name="support">Support</string>
+    <string name="about">About</string>
+
+    <!-- For Account Layout-->
+    <string name="name">Name</string>
+    <string name="save_changes">Save Changes</string>
+
+    <!-- For Support Layout-->
+    <string name="your_massege">Your Massege</string>
+    <string name="send">Send</string>
+
+    <!-- For Invite Layout-->
+    <string name="invite_friend">Invite your friend
+    you will get and your friend
+    100 V-Points 3 dayily</string>
+
+    <string name="your_link">Your Link</string>
+    <string name="copy">Copy</string>
+
+    <!-- For Wallet Layout-->
+    <string name="save_the_world">Save The World</string>
+
+    <!-- Top One Layout-->
+    <string name="top_of_the_month">Top Of The Month</string>
+    <string name="top_of_the_day">Top Of The Day</string>
+
+    <!-- For About Layout-->
+    <string name="about_us">asld;masjdbhjdscbsdjcndskjlcndsncvsdkjvndsnv
+            kvjndskvndsklvds
+            sdvnjdfkvndfvkldfv
+            dfvdfmkvjkdfvjdfnvjkdfnvkjdfnvdfv
+            dfvdfjbvdfkjvbdfvnfdklvmlkdfvd
+            fvnkjdfvndfkjvn</string>
 </resources>

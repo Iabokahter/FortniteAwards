@@ -17,8 +17,8 @@ public class Sign_Up_Activity extends AppCompatActivity {
         Button next = (Button) findViewById(R.id.continue_button);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
-                startActivityForResult(myIntent, 0);
+                Intent myIntent = new Intent(view.getContext(), MotherActivity.class);
+                startActivity(myIntent);
             }
         });
     }
