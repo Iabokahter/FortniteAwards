@@ -7,7 +7,6 @@ package com.sevenhills.fortniteawards;
         import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
-        import android.widget.TextView;
 
 public class SignIn_Activity extends AppCompatActivity {
 
@@ -23,7 +22,7 @@ public class SignIn_Activity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (Have_An_Email(email) && Right_Password(password)) {
-                    Intent myIntent = new Intent(view.getContext(), MotherActivity.class);
+                    Intent myIntent = new Intent(view.getContext(), MainActivity.class);
                     startActivity(myIntent);
                 }
             }

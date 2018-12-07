@@ -16,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
         <activity android:name=".AboutUs_Activity"></activity>
         <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".InviteFriendActivity"></activity>
@@ -24,7 +23,7 @@
         <activity android:name=".AccountActivity"></activity>
         <activity android:name=".ThemeActivity"></activity>
         <activity android:name=".TopOneActivity"></activity>
-        <activity android:name=".MotherActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".WalletActivity"></activity>
         <activity android:name=".Sign_Up_Activity"></activity>
         <activity android:name=".SignIn_Activity"></activity>

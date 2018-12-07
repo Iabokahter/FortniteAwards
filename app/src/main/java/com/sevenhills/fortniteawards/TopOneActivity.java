@@ -17,7 +17,7 @@ public class TopOneActivity extends AppCompatActivity {
         ImageView back = (ImageView) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), MotherActivity.class);
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
                 startActivity(myIntent);
             }
         });

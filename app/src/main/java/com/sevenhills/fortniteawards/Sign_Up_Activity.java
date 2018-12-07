@@ -1,9 +1,9 @@
 package com.sevenhills.fortniteawards;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +12,8 @@ import android.widget.TextView;
 
 public class Sign_Up_Activity extends AppCompatActivity {
 
-    public static int have_seen_before=0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,7 @@ public class Sign_Up_Activity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (Have_A_Name(name) && Have_An_Email(email) && Right_Password(password, con_pass)) {
-                    Intent myIntent = new Intent(view.getContext(), MotherActivity.class);
+                    Intent myIntent = new Intent(view.getContext(), MainActivity.class);
                     startActivity(myIntent);
                 }
             }
@@ -65,16 +66,18 @@ public class Sign_Up_Activity extends AppCompatActivity {
     boolean Right_Password(EditText text, EditText conText) {
         String password = text.getText().toString();
         String con_pass = conText.getText().toString();
-        if (password.length() < 8) {
+        /*if (password.length() < 8) {
             text.setError("Must be at least 8 char");
             return false;
         }
+
         if (password == con_pass)
             return true;
         else {
             conText.setError("Password not match");
             return false;
-        }
+        }*/
+        return  true;
     }
 
 }

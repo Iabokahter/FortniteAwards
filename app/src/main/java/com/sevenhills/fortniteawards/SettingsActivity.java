@@ -6,7 +6,6 @@ package com.sevenhills.fortniteawards;
         import android.view.View;
         import android.widget.ImageView;
         import android.widget.LinearLayout;
-        import android.widget.TextView;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -19,7 +18,7 @@ public class SettingsActivity extends AppCompatActivity {
         ImageView back = (ImageView) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), MotherActivity.class);
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
                 startActivity(myIntent);
             }
         });
