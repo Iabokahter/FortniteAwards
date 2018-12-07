@@ -10,6 +10,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="terms_and_service">By creating an accout you agree to our Terms of Service and Privacy Policy</string>
     <string name="continue_button">Continue</string>
+    <string name="already_have">Already have an account?</string>
 
 
     <!-- For Mother Layout-->
@@ -24,6 +25,7 @@
 
     <!-- For Account Layout-->
     <string name="name">Name</string>
+    <string name="change_setting">change account settings</string>
     <string name="save_changes">Save Changes</string>
 
     <!-- For Support Layout-->
@@ -43,7 +45,7 @@
 
     <!-- Top One Layout-->
     <string name="top_of_the_month">Top Of The Month</string>
-    <string name="top_of_the_day">Top Of The Day</string>
+    <string name="top_of_the_week">Top Of The Week</string>
 
     <!-- For About Layout-->
     <string name="about_us">asld;masjdbhjdscbsdjcndskjlcndsncvsdkjvndsnv
