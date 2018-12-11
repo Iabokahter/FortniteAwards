@@ -7,6 +7,7 @@ package com.sevenhills.fortniteawards.Activities;
         import android.os.Bundle;
         import android.support.v7.app.AppCompatActivity;
         import android.util.Patterns;
+        import android.util.Size;
         import android.view.View;
         import android.view.ViewAnimationUtils;
         import android.view.ViewTreeObserver;
@@ -53,8 +54,8 @@ public class SignIn_Activity extends AppCompatActivity {
                 ) {
             rootLayout.setVisibility(View.INVISIBLE);
 
-            revealX = intent.getIntExtra(EXTRA_CIRCULAR_REVEAL_X, 0);
-            revealY = intent.getIntExtra(EXTRA_CIRCULAR_REVEAL_Y, 0);
+            revealX = 360;// / 2// intent.getIntExtra(EXTRA_CIRCULAR_REVEAL_X, 40);
+            revealY = 560;////intent.getIntExtra(EXTRA_CIRCULAR_REVEAL_Y, 650);
 
 
             ViewTreeObserver viewTreeObserver = rootLayout.getViewTreeObserver();
@@ -128,5 +129,9 @@ public class SignIn_Activity extends AppCompatActivity {
             return false;
         } else
             return true;
+    }
+    @Override
+    public void onBackPressed() {
+        unRevealActivity();
     }
 }
