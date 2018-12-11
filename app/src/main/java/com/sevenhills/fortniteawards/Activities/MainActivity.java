@@ -1,4 +1,4 @@
-package com.sevenhills.fortniteawards;
+package com.sevenhills.fortniteawards.Activities;
 
 
         import android.app.FragmentManager;
@@ -11,6 +11,12 @@ package com.sevenhills.fortniteawards;
         import android.widget.ImageView;
         import android.widget.LinearLayout;
         import android.widget.Toast;
+
+        import com.sevenhills.fortniteawards.Fragments.AwardsFragment;
+        import com.sevenhills.fortniteawards.BetterList;
+        import com.sevenhills.fortniteawards.R;
+        import com.sevenhills.fortniteawards.Fragments.SettingFargment;
+        import com.sevenhills.fortniteawards.Fragments.main_fragment;
 
         import static android.widget.Toast.LENGTH_SHORT;
 
@@ -55,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast toast;
                 toast = Toast.makeText(context, "setting", LENGTH_SHORT);
                 toast.show();
-                mainTrans.add(R.id.left_frgament,betterList);
-                mainTrans.commit();;
+                mainTrans.add(R.id.fragment,betterList);
+                mainTrans.commit();
             }
         });
 

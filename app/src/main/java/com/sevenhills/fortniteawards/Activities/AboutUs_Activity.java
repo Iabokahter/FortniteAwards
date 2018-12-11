@@ -1,4 +1,4 @@
-package com.sevenhills.fortniteawards;
+package com.sevenhills.fortniteawards.Activities;
 
         import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
@@ -6,12 +6,14 @@ package com.sevenhills.fortniteawards;
         import android.view.View;
         import android.widget.ImageView;
 
-public class ThemeActivity extends AppCompatActivity {
+        import com.sevenhills.fortniteawards.R;
+
+public class AboutUs_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.theme_layout);
+        setContentView(R.layout.about_layout);
 
 
         ImageView back = (ImageView) findViewById(R.id.back);

@@ -1,7 +1,6 @@
-package com.sevenhills.fortniteawards;
+package com.sevenhills.fortniteawards.Activities;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Patterns;
@@ -9,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.sevenhills.fortniteawards.R;
 
 public class Sign_Up_Activity extends AppCompatActivity {
 
@@ -23,8 +24,6 @@ public class Sign_Up_Activity extends AppCompatActivity {
         final EditText email = findViewById(R.id.email);
         final EditText password = findViewById(R.id.password);
         final EditText con_pass = findViewById(R.id.confirm_password);
-
-
         Button next = (Button) findViewById(R.id.continue_button);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

@@ -1,4 +1,4 @@
-package com.sevenhills.fortniteawards;
+package com.sevenhills.fortniteawards.Activities;
 
         import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ package com.sevenhills.fortniteawards;
         import android.view.View;
         import android.widget.ImageView;
         import android.widget.LinearLayout;
+
+        import com.sevenhills.fortniteawards.R;
 
 public class SettingsActivity extends AppCompatActivity {
 

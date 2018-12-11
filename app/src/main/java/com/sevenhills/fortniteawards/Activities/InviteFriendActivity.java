@@ -1,4 +1,4 @@
-package com.sevenhills.fortniteawards;
+package com.sevenhills.fortniteawards.Activities;
 
         import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
@@ -6,18 +6,20 @@ package com.sevenhills.fortniteawards;
         import android.view.View;
         import android.widget.ImageView;
 
-public class AccountActivity extends AppCompatActivity {
+        import com.sevenhills.fortniteawards.R;
+
+public class InviteFriendActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.account_layout);
+        setContentView(R.layout.invite_friend_layout);
 
 
         ImageView back = (ImageView) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), SettingsActivity.class);
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
                 startActivity(myIntent);
             }
         });
