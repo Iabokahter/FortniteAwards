@@ -10,6 +10,8 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowContentTransitions">true</item>
+
     </style>
     <style name="FortniteNew" parent="Theme.AppCompat.Light.NoActionBar" >
         <item name="android:colorBackground" tools:ignore="PrivateResource">@color/background_material_light</item>

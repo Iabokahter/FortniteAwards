@@ -3,10 +3,9 @@ package com.sevenhills.fortniteawards.Activities;
         import android.annotation.SuppressLint;
         import android.content.Intent;
         import android.support.v4.app.ActivityOptionsCompat;
-        import android.support.v4.view.ViewCompat;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
-        import android.support.v7.widget.CardView;
+        import android.support.v4.util.Pair;
         import android.view.View;
         import android.widget.ImageView;
         import android.widget.TextView;
@@ -28,7 +27,6 @@ public class WithdrawActivity extends AppCompatActivity implements View.OnClickL
         V2 = new VbucksCard(R.id.card2,2);
         V3= new VbucksCard(R.id.card3,3);
         V4 = new VbucksCard(R.id.card4,4);
-
 
 
 
@@ -61,7 +59,10 @@ public class WithdrawActivity extends AppCompatActivity implements View.OnClickL
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(getApplicationContext(), CompleteWithdrawActivity.class);
-                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(WithdrawActivity.this,image,ViewCompat.getTransitionName(image));
+                    Pair<View, String> p1 = Pair.create((View) image, "coin_image");
+                    Pair<View, String> p2 = Pair.create((View)vbucks, "coin_text");
+
+                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(WithdrawActivity.this,p1,p2);
                     startActivity(intent,options.toBundle());
                 }
             });

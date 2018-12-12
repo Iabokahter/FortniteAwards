@@ -11,8 +11,11 @@
         android:layout_height="155dp"
         android:layout_gravity="center"
         android:layout_marginTop="140dp"
-        android:transitionName="coin_image"
+        android:scaleY="2"
+        android:scaleX="2"
+        android:scaleType="centerCrop"
 
+        android:transitionName="coin_image"
         app:srcCompat="@drawable/coins4" />
 
     <TextView
