@@ -10,11 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/FortniteNew">
         <activity android:name=".Activities.SplashScreenActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Activities.AboutUs_Activity"></activity>
         <activity android:name=".Activities.SettingsActivity"></activity>
@@ -23,10 +19,18 @@
         <activity android:name=".Activities.AccountActivity"></activity>
         <activity android:name=".Activities.ThemeActivity"></activity>
         <activity android:name=".Activities.TopOneActivity"></activity>
-        <activity android:name=".Activities.MainActivity"></activity>
-        <activity android:name=".Activities.WalletActivity"></activity>
+        <activity android:name=".Activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.WithdrawActivity"></activity>
         <activity android:name=".Activities.Sign_Up_Activity"></activity>
         <activity android:name=".Activities.SignIn_Activity"></activity>
+        <activity android:name=".Activities.WithdrawActivity"></activity>
+        <activity android:name=".Activities.CompleteWithdrawActivity"></activity>
     </application>
 
 </manifest>

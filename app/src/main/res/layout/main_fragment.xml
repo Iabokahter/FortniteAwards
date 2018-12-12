@@ -174,9 +174,10 @@
                 android:id="@+id/best_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginTop="485dp"
-                android:src="@drawable/top_background"/>
+                android:src="@drawable/top_background" />
 
         </RelativeLayout>
     </ScrollView>

@@ -34,13 +34,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView setting = (ImageView) findViewById(R.id.setting_text);
+        ImageView setting = findViewById(R.id.setting_text);
         setting.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Context context = getApplicationContext();
-                Toast toast;
-                toast = Toast.makeText(context, "setting", LENGTH_SHORT);
-                toast.show();
                 mainTrans.replace(R.id.fragment,settingFargment);
                 mainTrans.commit();
             }
@@ -66,15 +63,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        LinearLayout wallet = (LinearLayout) findViewById(R.id.wallet);
+        LinearLayout wallet =  findViewById(R.id.wallet);
         wallet.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Context context = getApplicationContext();
-                Toast toast;
-                toast = Toast.makeText(context, "awards", LENGTH_SHORT);
-                toast.show();
-                mainTrans.replace(R.id.fragment,awardsFragment);
-                mainTrans.commit();
+                //Intent i = new Intent(this.get)
+                startActivity(new Intent(view.getContext(),WithdrawActivity.class));
             }
         });
 

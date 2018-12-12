@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/coins_image_final"
+        android:layout_width="227dp"
+        android:layout_height="155dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="140dp"
+        android:transitionName="coin_image"
+
+        app:srcCompat="@drawable/coins4" />
+
+    <TextView
+        android:transitionName="coin_text"
+        android:id="@+id/vbucksAmount_final"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/white"
+        android:text="test" />
+</LinearLayout>
