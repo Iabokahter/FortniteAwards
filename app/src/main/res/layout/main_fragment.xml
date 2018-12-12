@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,20 +23,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/textview_whiteborder"
-                android:paddingHorizontal="40dp"
+                android:paddingHorizontal="70dp"
                 android:paddingVertical="8dp"
-                android:text="0 P"
-                android:textColor="@color/cyan"
+                android:text="0"
+                android:textColor="@color/light_blue"
                 android:textSize="36sp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="24dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/splash_screen"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/v_pointText"
-                android:layout_marginLeft="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="-28dp"
                 android:text="@string/your_point"
                 android:textAllCaps="true"
@@ -43,20 +54,19 @@
                 android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/setting_text"
-                android:layout_width="wrap_content"
+                android:id="@+id/navigation_button"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_marginTop="18dp"
-                android:layout_marginRight="22dp"
-                android:src="@drawable/setting" />
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/navigation" />
 
             <LinearLayout
                 android:id="@+id/watch_video"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="125dp"
+                android:layout_marginTop="145dp"
                 android:orientation="vertical"
                 android:background="@drawable/main_button_background">
 
@@ -90,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="245dp"
+                android:layout_marginTop="265dp"
                 android:orientation="vertical"
                 android:background="@drawable/main_button_background">
 
@@ -124,7 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="365dp"
+                android:layout_marginTop="385dp"
                 android:orientation="vertical"
                 android:background="@drawable/main_button_background">
 
@@ -156,7 +166,7 @@
             <LinearLayout
                 android:id="@+id/wallet"
                 android:layout_width="wrap_content"
-                android:layout_height="85dp"
+                android:layout_height="110dp"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
                 android:orientation="vertical"
@@ -168,15 +178,40 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="15dp"
                     android:src="@drawable/withdraw"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Withdraw"
+                    android:textSize="24sp" />
             </LinearLayout>
 
-            <ImageView
+            <android.support.design.widget.FloatingActionButton
                 android:id="@+id/best_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginTop="485dp"
-                android:src="@drawable/top_background"/>
+                android:layout_marginRight="16dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:backgroundTint="@android:color/white"
+                android:src="@drawable/cup"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="485dp"
+                android:clickable="true"
+                android:backgroundTint="@android:color/white"
+                android:src="@drawable/spinning_wheel" />
 
         </RelativeLayout>
     </ScrollView>

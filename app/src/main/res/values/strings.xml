@@ -4,6 +4,7 @@
     <string name="create_an_account">Create an Account</string>
     <string name="login">Sign in</string>
     <string name="signup">sign up</string>
+
     <!-- For Sign-Up Layout-->
     <string name="full_name">Full Name</string>
     <string name="email">Email</string>
