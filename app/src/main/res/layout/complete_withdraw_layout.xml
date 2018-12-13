@@ -7,14 +7,10 @@
 
     <ImageView
         android:id="@+id/coins_image_final"
-        android:layout_width="227dp"
-        android:layout_height="155dp"
+        android:layout_width="155dp"
+        android:layout_height="111dp"
         android:layout_gravity="center"
         android:layout_marginTop="140dp"
-        android:scaleY="2"
-        android:scaleX="2"
-        android:scaleType="centerCrop"
-
         android:transitionName="coin_image"
         app:srcCompat="@drawable/coins4" />
 
@@ -27,5 +23,29 @@
         android:gravity="center"
         android:layout_margin="20dp"
         android:textColor="@android:color/white"
-        android:text="test" />
+        android:text="1000 V-Bucks" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@drawable/changesetting_back"
+        android:layout_margin="30dp"
+        android:inputType="textEmailAddress"
+        android:hint="Enter your email"
+
+        android:padding="20dp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_button_background"
+        android:textColor="#707070"
+
+        android:layout_gravity="center"
+        android:text="Send" />
+
+
 </LinearLayout>

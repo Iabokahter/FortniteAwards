@@ -1,13 +1,22 @@
 package com.sevenhills.fortniteawards.Fragments;
 
 
-import android.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import com.sevenhills.fortniteawards.Activities.InviteFriendActivity;
+import com.sevenhills.fortniteawards.Activities.WithdrawActivity;
 import com.sevenhills.fortniteawards.R;
+
+import static android.widget.Toast.LENGTH_SHORT;
 
 
 public class main_fragment extends Fragment {
@@ -15,7 +24,24 @@ public class main_fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.main_fragment, container, false);
+
+        View thisView  = inflater.inflate(R.layout.main_fragment, container, false);
+//
+        LinearLayout invite_friend = (LinearLayout) thisView.findViewById(R.id.invite_friend);
+        invite_friend.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), InviteFriendActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
+        LinearLayout wallet = (LinearLayout) thisView.findViewById(R.id.wallet);
+        wallet.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),WithdrawActivity.class));
+            }
+        });
+        return thisView;
     }
 
 }

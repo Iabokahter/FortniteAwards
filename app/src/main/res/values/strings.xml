@@ -59,4 +59,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">CHANGE ME PLEASE</string>
+    <string name="navigation_drawer_close">AND ME</string>
 </resources>

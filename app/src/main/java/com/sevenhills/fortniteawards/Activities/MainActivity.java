@@ -1,76 +1,99 @@
 package com.sevenhills.fortniteawards.Activities;
 
 
-        import android.app.FragmentManager;
-        import android.app.FragmentTransaction;
-        import android.content.Context;
-        import android.content.Intent;
-        import android.support.v7.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.ImageView;
-        import android.widget.LinearLayout;
-        import android.widget.Toast;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.view.View;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 
-        import com.sevenhills.fortniteawards.Fragments.AwardsFragment;
-        import com.sevenhills.fortniteawards.BetterList;
-        import com.sevenhills.fortniteawards.R;
-        import com.sevenhills.fortniteawards.Fragments.SettingFargment;
-        import com.sevenhills.fortniteawards.Fragments.main_fragment;
+import com.sevenhills.fortniteawards.Fragments.SettingFargment;
+import com.sevenhills.fortniteawards.Fragments.main_fragment;
+import com.sevenhills.fortniteawards.R;
 
-        import static android.widget.Toast.LENGTH_SHORT;
-
-public class MainActivity extends AppCompatActivity {
-
-    main_fragment mainFragment=new main_fragment();
-    AwardsFragment awardsFragment=new AwardsFragment();
-    SettingFargment settingFargment=new SettingFargment();
-    BetterList betterList=new BetterList();
-    FragmentManager fm =getFragmentManager();
-    FragmentTransaction mainTrans=fm.beginTransaction();
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView setting = findViewById(R.id.setting_text);
-        setting.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Context context = getApplicationContext();
-                mainTrans.replace(R.id.fragment,settingFargment);
-                mainTrans.commit();
-            }
-        });
 
-        LinearLayout invite_friend = (LinearLayout) findViewById(R.id.invite_friend);
-        invite_friend.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), InviteFriendActivity.class);
-                startActivity(myIntent);
-            }
-        });
 
-        ImageView best_One = (ImageView) findViewById(R.id.best_one);
-        best_One.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Context context = getApplicationContext();
-                Toast toast;
-                toast = Toast.makeText(context, "setting", LENGTH_SHORT);
-                toast.show();
-                mainTrans.add(R.id.fragment,betterList);
-                mainTrans.commit();
-            }
-        });
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
-        LinearLayout wallet =  findViewById(R.id.wallet);
-        wallet.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //Intent i = new Intent(this.get)
-                startActivity(new Intent(view.getContext(),WithdrawActivity.class));
-            }
-        });
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_camera);
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        main_fragment fragment = new main_fragment();
+        fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
+        drawer.openDrawer(GravityCompat.START);
     }
 
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        Fragment fragment = null;
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        if (id == R.id.nav_camera) {
+            fragment = new main_fragment();
+        } else if (id == R.id.nav_gallery) {
+            fragment = new SettingFargment();
+        }
+        fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }
