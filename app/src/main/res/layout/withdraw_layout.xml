@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+        android:background="@color/purple"
         android:orientation="vertical">
 
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="20dp"
-                android:text="@string/save_the_world"
-                android:layout_gravity="center"
-                android:textColor="@android:color/white"
-                android:textSize="30sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/save_the_world"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/withdrawLogo"
-
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
@@ -52,65 +50,64 @@
             android:textSize="15sp" />
 
 
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-                <include
-                    android:id="@+id/card2"
-                    layout="@layout/coin_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+            <include
+                android:id="@+id/card2"
+                layout="@layout/coin_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_weight="1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    tools:layout_editor_absoluteY="38dp" />
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteY="38dp" />
 
-                <include
-                    android:id="@+id/card4"
-                    layout="@layout/coin_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginRight="32dp"
-                    android:layout_marginBottom="76dp"
-                    android:layout_weight="1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+            <include
+                android:id="@+id/card4"
+                layout="@layout/coin_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="76dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-                <include
-                    android:id="@+id/card3"
+            <include
+                android:id="@+id/card3"
 
-                    layout="@layout/coin_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                layout="@layout/coin_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-                    android:layout_marginStart="32dp"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginBottom="76dp"
-                    android:layout_weight="1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginBottom="76dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-                <include
-                    android:id="@+id/card1"
+            <include
+                android:id="@+id/card1"
 
-                    layout="@layout/coin_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                layout="@layout/coin_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-                    android:layout_marginStart="28dp"
-                    android:layout_marginLeft="28dp"
-                    android:layout_weight="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="37dp" />
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="37dp" />
 
-            </android.support.constraint.ConstraintLayout>
-        </LinearLayout>
-
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 
 
 </ScrollView>

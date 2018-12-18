@@ -49,14 +49,6 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        LinearLayout about = (LinearLayout) findViewById(R.id.about_activity);
-        about.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), AboutUs_Activity.class);
-                startActivity(myIntent);
-            }
-        });
-
 
     }
 }

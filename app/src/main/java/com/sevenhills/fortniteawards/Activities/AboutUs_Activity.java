@@ -19,7 +19,7 @@ public class AboutUs_Activity extends AppCompatActivity {
         ImageView back = (ImageView) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), SettingsActivity.class);
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
                 startActivity(myIntent);
             }
         });
