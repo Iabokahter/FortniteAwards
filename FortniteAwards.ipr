@@ -370,20 +370,73 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/transition/27.1.1/88ebe6765790253d410e51a3952571565f2040e9/transition-27.1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: com.github.bumptech.glide:glide:3.7.0@jar">
+    <library name="Gradle: com.google.android.gms:play-services-base-16.0.1">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/d84c564040328f2ad8b6046fc5c7e46b/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/d84c564040328f2ad8b6046fc5c7e46b/res" />
       </CLASSES>
       <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/24a0b0e63af9530bcedd06ed1983a4f2f02155a3/glide-3.7.0-sources.jar!/" />
-      </SOURCES>
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.android.gms:play-services-basement-16.1.0">
+      <CLASSES>
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/fb5dfdc35996312694dc89e58559a976/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-basement-16.1.0.aar/fb5dfdc35996312694dc89e58559a976/jars/classes.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-basement/16.1.0/b17ac2a01a8f2f3e29192a283123d39200c64f1b/play-services-basement-16.1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.android.gms:play-services-flags-16.0.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/bc46e73a8c1c7e04ca2f733937d6364b/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/bc46e73a8c1c7e04ca2f733937d6364b/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.android.gms:play-services-tasks-16.0.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/af76555982f1a4aabbf546d5cdb0282a/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-tasks-16.0.1.aar/af76555982f1a4aabbf546d5cdb0282a/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
     </library>
     <library name="Gradle: com.google.code.findbugs:jsr305:2.0.1@jar">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar!/" />
       </CLASSES>
       <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.firebase:firebase-auth-16.1.0">
+      <CLASSES>
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/97bb7603b1a9bf99d94b81a43ae5bfd2/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-16.1.0.aar/97bb7603b1a9bf99d94b81a43ae5bfd2/jars/classes.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-auth/16.1.0/135538816aedddb91f99e612fb4693e93362c1e/firebase-auth-16.1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.firebase:firebase-auth-interop-16.0.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/6133658b6216c67e5d7a51f23feedd58/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-auth-interop-16.0.1.aar/6133658b6216c67e5d7a51f23feedd58/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.firebase:firebase-common-16.0.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/3fff93510a7dfac59442032a090d819d/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-common-16.0.3.aar/3fff93510a7dfac59442032a090d819d/res" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-common/16.0.3/d8fb501ad05b51e2a89e23dafeb391fd62a030b5/firebase-common-16.0.3-javadoc.jar!/" />
+      </JAVADOC>
       <SOURCES />
     </library>
     <library name="Gradle: com.squareup:javawriter:2.1.1@jar">

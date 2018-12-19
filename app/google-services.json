@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "418619909373",
+    "firebase_url": "https://fortniteawards-78e24.firebaseio.com",
+    "project_id": "fortniteawards-78e24",
+    "storage_bucket": "fortniteawards-78e24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418619909373:android:8e9ea610f929763b",
+        "android_client_info": {
+          "package_name": "com.sevenhills.fortniteawards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418619909373-721mlf892go0mbk1ugkh2pq7lh3lh98t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sevenhills.fortniteawards",
+            "certificate_hash": "a159b92c1a3730535c47c92da2662d42ceee528f"
+          }
+        },
+        {
+          "client_id": "418619909373-6abfcg1qqgfodur2lj600122j0m7u88m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_7vMvAmSpZo54OwB5Xi6BLjI1X1-Qa8M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418619909373-6abfcg1qqgfodur2lj600122j0m7u88m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

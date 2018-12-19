@@ -5,7 +5,9 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.ViewAnimationUtils;
@@ -14,24 +16,34 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.sevenhills.fortniteawards.R;
 
 public class Sign_Up_Activity extends AppCompatActivity {
 
 
 
+    private static final String TAG = "EmailPassword";
     public static final String EXTRA_CIRCULAR_REVEAL_X = "EXTRA_CIRCULAR_REVEAL_X";
     public static final String EXTRA_CIRCULAR_REVEAL_Y = "EXTRA_CIRCULAR_REVEAL_Y";
     private int revealX;
     private int revealY;
     View rootLayout;
+    private FirebaseAuth mAuth;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up_layout);
-
+        mAuth = FirebaseAuth.getInstance();
         final EditText name = findViewById(R.id.full_name);
         final EditText email = findViewById(R.id.email);
         final EditText password = findViewById(R.id.password);
@@ -41,11 +53,34 @@ public class Sign_Up_Activity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (Have_A_Name(name) && Have_An_Email(email) && Right_Password(password, con_pass)) {
+                    mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                            .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        // Sign in success, update UI with the signed-in user's information
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        Log.e(TAG, "createUserWithEmail:done", task.getException());
+
+                                        //updateUI(user);
+                                    } else {
+                                        // If sign in fails, display a message to the user.
+
+                                        Log.e(TAG, "createUserWithEmail:failure", task.getException());
+                                        Toast.makeText(getApplicationContext(), "Authentication failed.",
+                                               Toast.LENGTH_SHORT).show();
+                                    //    updateUI(null);
+                                    }
+
+                                    // ...
+                                }
+                            });
                     Intent myIntent = new Intent(view.getContext(), MainActivity.class);
                     startActivity(myIntent);
                 }
             }
         });
+
 
         TextView signin = (TextView) findViewById(R.id.sign_in);
         signin.setOnClickListener(new View.OnClickListener() {
@@ -142,18 +177,17 @@ public class Sign_Up_Activity extends AppCompatActivity {
     boolean Right_Password(EditText text, EditText conText) {
         String password = text.getText().toString();
         String con_pass = conText.getText().toString();
-        /*if (password.length() < 8) {
+        if (password.length() < 8) {
             text.setError("Must be at least 8 char");
             return false;
         }
 
-        if (password == con_pass)
+        if (password.contains(con_pass))
             return true;
         else {
             conText.setError("Password not match");
             return false;
-        }*/
-        return  true;
+        }
     }
 
     @Override
