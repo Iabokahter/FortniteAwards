@@ -20,48 +20,54 @@
             android:layout_marginTop="100dp"
             android:layout_marginBottom="20dp"
             android:gravity="center_horizontal"
-            android:text="@string/create_an_account"
+            android:text="@string/login"
             android:textColor="@color/purple"
             android:textSize="26sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="@string/already_have"
-            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/sign_in"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginBottom="20dp"
             android:gravity="center_horizontal"
             android:text="Sign In"
-
             android:textColor="@android:color/holo_blue_light"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            />
+
+
+        <!--WE DONT WANT IT-->
+
+
+
+
 
         <EditText
+            android:paddingStart="25dp"
+            android:paddingLeft="25dp"
             android:id="@+id/full_name"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginLeft="50dp"
-            android:background="@drawable/textview_border"
-
+            android:background="@drawable/circular_boarder"
             android:layout_marginRight="50dp"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/full_name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+             />
 
         <EditText
+
+            android:paddingStart="25dp"
+            android:paddingLeft="25dp"
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:background="@drawable/textview_border"
+            android:background="@drawable/circular_boarder"
 
             android:layout_marginTop="16dp"
             android:ems="10"
@@ -69,6 +75,9 @@
             android:inputType="textEmailAddress" />
 
         <EditText
+
+            android:paddingStart="25dp"
+            android:paddingLeft="25dp"
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="55dp"
@@ -77,16 +86,19 @@
             android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/password"
-            android:background="@drawable/textview_border"
+            android:background="@drawable/circular_boarder"
             android:inputType="textPassword" />
 
         <EditText
+
+            android:paddingStart="25dp"
+            android:paddingLeft="25dp"
             android:id="@+id/confirm_password"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:background="@drawable/textview_border"
+            android:background="@drawable/circular_boarder"
 
             android:layout_marginTop="16dp"
             android:ems="10"
@@ -101,16 +113,8 @@
             android:paddingBottom="20dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-
-
             android:text="@string/terms_and_service"
             android:textSize="12sp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/fb_tw_gog"/>
 
         <Button
             android:id="@+id/continue_button"
@@ -121,7 +125,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="20dp"
             android:backgroundTint="#714ABE"
-            android:background="@drawable/main_button_background"
+            android:background="@drawable/buttonstyle"
             android:padding="18dp"
             android:text="@string/continue_button"
              />

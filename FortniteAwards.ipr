@@ -85,7 +85,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="RunConfigurationProducerService">
@@ -251,6 +251,16 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/cardview-v7/27.1.1/8300d225b205b04e22ec475cb412bd3621911d3/cardview-v7-27.1.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: com.android.support:customtabs-27.0.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/2b2114f83ce86122dd2120d19dd09084/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/2b2114f83ce86122dd2120d19dd09084/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/customtabs/27.0.2/32ca2a7e34a4796c84d57234eecb3a4928842689/customtabs-27.0.2-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: com.android.support:design-27.1.1">
       <CLASSES>
         <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/db14f46083d537076e9297138aefb874/res" />
@@ -370,6 +380,120 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/transition/27.1.1/88ebe6765790253d410e51a3952571565f2040e9/transition-27.1.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: com.facebook.android:facebook-android-sdk-4.38.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.38.1.aar/87d133bd89038fd6eed93b346f4d4f2e/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.38.1.aar/87d133bd89038fd6eed93b346f4d4f2e/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-android-sdk/4.38.1/717bff16fea6fb7c2cf0b352d1274ce2865b1573/facebook-android-sdk-4.38.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.facebook.android:facebook-applinks-4.38.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.38.1.aar/c87d2a50b8e3200376a0bf37f5be97c5/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.38.1.aar/c87d2a50b8e3200376a0bf37f5be97c5/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-applinks/4.38.1/b2def24ea252ff31d5bf44ddc45903fb69446dea/facebook-applinks-4.38.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.facebook.android:facebook-common-4.38.1">
+      <CLASSES>
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-common-4.38.1.aar/c7ed39c6041e83f5853b61c6e3714fd9/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-common-4.38.1.aar/c7ed39c6041e83f5853b61c6e3714fd9/jars/classes.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-common/4.38.1/7308b87b27e7061d1affe383b035229e944ef450/facebook-common-4.38.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.facebook.android:facebook-core-4.38.1">
+      <CLASSES>
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-core-4.38.1.aar/8fb92801d189ec8e2803a877234ed6a6/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-core-4.38.1.aar/8fb92801d189ec8e2803a877234ed6a6/jars/classes.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-core/4.38.1/c7793eca4e6f2ccd455975d0fdbe33aa65447715/facebook-core-4.38.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.facebook.android:facebook-login-4.38.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-login-4.38.1.aar/523a6ae4e20b7ed1c9af6cd064798854/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-login-4.38.1.aar/523a6ae4e20b7ed1c9af6cd064798854/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-login/4.38.1/e53d2fe10f7fd8be741753d21d39f753dfd4c8e6/facebook-login-4.38.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.facebook.android:facebook-marketing-4.38.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-marketing-4.38.1.aar/dee9b3d2b2aacc4f7507dc91d451ccc4/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-marketing-4.38.1.aar/dee9b3d2b2aacc4f7507dc91d451ccc4/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-marketing/4.38.1/5248b3b43f64bd7aca19c7fc11a9e4ba521b9977/facebook-marketing-4.38.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.facebook.android:facebook-messenger-4.38.1">
+      <CLASSES>
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.38.1.aar/1fe45dd85afe2fcdc0bf0b02dc48057e/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.38.1.aar/1fe45dd85afe2fcdc0bf0b02dc48057e/jars/classes.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-messenger/4.38.1/b4ed229c7450413d75f40da5fc0a57f9af396b94/facebook-messenger-4.38.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.facebook.android:facebook-places-4.38.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-places-4.38.1.aar/45c0486b5935ee14e636407b05ac57ed/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-places-4.38.1.aar/45c0486b5935ee14e636407b05ac57ed/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-places/4.38.1/c7169d1c7fbf01dc680982c5cc3fda0b7802cf4/facebook-places-4.38.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.facebook.android:facebook-share-4.38.1">
+      <CLASSES>
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-share-4.38.1.aar/849652c21723570113acb6a925746ec4/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-share-4.38.1.aar/849652c21723570113acb6a925746ec4/jars/classes.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-share/4.38.1/2cbe1a2d13f2ad012d1cb5c317683b9f8eb4bd85/facebook-share-4.38.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.google.android.gms:play-services-auth-16.0.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/17a3c8ddc5099d8414c836e66305bc69/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-16.0.1.aar/17a3c8ddc5099d8414c836e66305bc69/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.android.gms:play-services-auth-api-phone-16.0.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-16.0.0.aar/41fe165e4c304c61bd924860b66a277b/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-api-phone-16.0.0.aar/41fe165e4c304c61bd924860b66a277b/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.android.gms:play-services-auth-base-16.0.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-16.0.0.aar/a685b4e4534750baefd19d6b5fad314c/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-16.0.0.aar/a685b4e4534750baefd19d6b5fad314c/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="Gradle: com.google.android.gms:play-services-base-16.0.1">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/d84c564040328f2ad8b6046fc5c7e46b/jars/classes.jar!/" />
@@ -438,6 +562,42 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-common/16.0.3/d8fb501ad05b51e2a89e23dafeb391fd62a030b5/firebase-common-16.0.3-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES />
+    </library>
+    <library name="Gradle: com.google.zxing:core:3.3.0@jar">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/39d966e052e28fc7d83793b02e0af97ccf955745/core-3.3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.parse.bolts:bolts-android:1.4.0@jar">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.4.0/cc174c559b5177982887bf6e1b76003aebad9516/bolts-android-1.4.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.4.0/a1942c5e480d86987076fbaae8d2403b0c70927d/bolts-android-1.4.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.parse.bolts:bolts-applinks:1.4.0@jar">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/7b0b0d485f566cd1b70d7d4ea20bf3620af71c1c/bolts-applinks-1.4.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.parse.bolts:bolts-tasks:1.4.0@jar">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/a523a9722ec97e8fc4f015dd50c98cdda8029ba4/bolts-tasks-1.4.0-sources.jar!/" />
+      </SOURCES>
     </library>
     <library name="Gradle: com.squareup:javawriter:2.1.1@jar">
       <CLASSES>

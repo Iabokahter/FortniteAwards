@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:id="@+id/root_view_signin"
@@ -61,6 +62,37 @@
                 android:textColor="@android:color/black" />
 
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp">
+
+                <Button
+
+                    android:id="@+id/google_signin"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="54dp"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/google_sign_in" />
+
+                <Button
+                    android:id="@+id/fb_signin"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginRight="48dp"
+                    android:background="@drawable/fb_sign_in"
+                    android:gravity="center" />
+            </RelativeLayout>
 
             <Button
 

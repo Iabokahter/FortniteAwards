@@ -17,7 +17,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -60,7 +61,7 @@ public class Sign_Up_Activity extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         // Sign in success, update UI with the signed-in user's information
                                         FirebaseUser user = mAuth.getCurrentUser();
-                                        Log.e(TAG, "createUserWithEmail:done", task.getException());
+                                        Log.e(TAG, "createUserWithEmail:done    ", task.getException());
 
                                         //updateUI(user);
                                     } else {
