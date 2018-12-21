@@ -18,6 +18,8 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.sevenhills.fortniteawards.Fragments.SettingFargment;
 import com.sevenhills.fortniteawards.Fragments.main_fragment;
 import com.sevenhills.fortniteawards.R;
@@ -63,8 +65,11 @@ public class MainActivity extends AppCompatActivity
         LinearLayout wallet = (LinearLayout) findViewById(R.id.wallet);
         wallet.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, WithdrawActivity.class);
-                startActivity(intent);
+
+
+//                Snackbar.make(view,"kjystkref",0).show();
+//                Intent intent = new Intent(MainActivity.this, WithdrawActivity.class);
+//                startActivity(intent);
             }
         });
 
