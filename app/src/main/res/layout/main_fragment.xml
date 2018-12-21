@@ -17,11 +17,12 @@
             android:layout_height="match_parent"
             android:background="@color/purple">
 
-            <ImageView
+           <!-- <ImageView
+                android:id="@+id/navigation"
                 android:layout_width="40dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="22dp"
-                android:src="@drawable/navigation"/>
+                android:src="@drawable/navigation"/>-->
 
             <TextView
                 android:id="@+id/v_pointText"
@@ -165,10 +166,10 @@
             <LinearLayout
                 android:id="@+id/wallet"
                 android:layout_width="wrap_content"
-                android:layout_height="132dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="500dp"
                 android:background="@drawable/awards_background"
                 android:orientation="vertical">
 

@@ -3,6 +3,8 @@ package com.sevenhills.fortniteawards.Activities;
         import android.annotation.SuppressLint;
         import android.content.Intent;
         import android.support.v4.app.ActivityOptionsCompat;
+        import android.support.v4.app.Fragment;
+        import android.support.v4.app.FragmentManager;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.support.v4.util.Pair;
@@ -10,6 +12,7 @@ package com.sevenhills.fortniteawards.Activities;
         import android.widget.ImageView;
         import android.widget.TextView;
 
+        import com.sevenhills.fortniteawards.Fragments.main_fragment;
         import com.sevenhills.fortniteawards.R;
 
 
@@ -29,7 +32,14 @@ public class WithdrawActivity extends AppCompatActivity implements View.OnClickL
         V4 = new VbucksCard(R.id.card4,4);
 
 
-
+        ImageView back = (ImageView) findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Fragment fragment=new main_fragment();
+                FragmentManager fragmentManager=getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
+            }
+        });
 
 
     }
