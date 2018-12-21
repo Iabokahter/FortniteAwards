@@ -17,27 +17,26 @@ package com.sevenhills.fortniteawards.Activities;
 
 
 public class WithdrawActivity extends AppCompatActivity implements View.OnClickListener {
-    VbucksCard V1,V2,V3,V4;
-    public int []vbucksAmount =  {1000,2800,7500,13500};
-    public int []pbucksAmount =  {10000,20000,40000,70000};
+    VbucksCard V1, V2, V3, V4;
+    public int[] vbucksAmount = {1000, 2800, 7500, 13500};
+    public int[] pbucksAmount = {10000, 20000, 40000, 70000};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.withdraw_layout);
-        V1 = new VbucksCard(R.id.card1,1);
-        V2 = new VbucksCard(R.id.card2,2);
-        V3= new VbucksCard(R.id.card3,3);
-        V4 = new VbucksCard(R.id.card4,4);
+        V1 = new VbucksCard(R.id.card1, 1);
+        V2 = new VbucksCard(R.id.card2, 2);
+        V3 = new VbucksCard(R.id.card3, 3);
+        V4 = new VbucksCard(R.id.card4, 4);
 
 
         ImageView back = (ImageView) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Fragment fragment=new main_fragment();
-                FragmentManager fragmentManager=getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
+                startActivity(myIntent);
             }
         });
 
@@ -57,10 +56,10 @@ public class WithdrawActivity extends AppCompatActivity implements View.OnClickL
 
         View cardView;
         ImageView image;
-        TextView vbucks,pbucks;
+        TextView vbucks, pbucks;
 
         @SuppressLint("SetTextI18n")
-        VbucksCard (int id, int amount) {
+        VbucksCard(int id, final int amount) {
             cardView = findViewById(id);
             image = cardView.findViewById(R.id.coin_image);
             vbucks = cardView.findViewById(R.id.vbucksAmount);
@@ -70,13 +69,13 @@ public class WithdrawActivity extends AppCompatActivity implements View.OnClickL
                 public void onClick(View view) {
                     Intent intent = new Intent(getApplicationContext(), CompleteWithdrawActivity.class);
                     Pair<View, String> p1 = Pair.create((View) image, "coin_image");
-                    Pair<View, String> p2 = Pair.create((View)vbucks, "coin_text");
+                    Pair<View, String> p2 = Pair.create((View) vbucks, "coin_text");
 
-                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(WithdrawActivity.this,p1,p2);
-                    startActivity(intent,options.toBundle());
+                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(WithdrawActivity.this, p1, p2);
+                    startActivity(intent, options.toBundle());
                 }
             });
-            switch (amount){
+            switch (amount) {
 
                 case 1:
                     image.setImageDrawable(getDrawable(R.drawable.coin1));
@@ -105,7 +104,6 @@ public class WithdrawActivity extends AppCompatActivity implements View.OnClickL
             }
 
         }
-
 
 
     }

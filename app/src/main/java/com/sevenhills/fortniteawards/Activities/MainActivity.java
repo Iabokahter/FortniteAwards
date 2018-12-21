@@ -1,6 +1,7 @@
 package com.sevenhills.fortniteawards.Activities;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        final DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -45,7 +46,12 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_camera);
 
-
+        ImageView navigation = (ImageView) findViewById(R.id.navigation);
+        navigation.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                drawer.openDrawer(GravityCompat.START);
+            }
+        });
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         main_fragment fragment = new main_fragment();

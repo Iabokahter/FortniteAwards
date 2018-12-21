@@ -9,8 +9,8 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.google.firebase.database.DatabaseReference;
@@ -40,17 +40,17 @@ public class main_fragment extends Fragment {
             }
         });*/
 
-        LinearLayout invite_friend = (LinearLayout) thisView.findViewById(R.id.invite_friend);
-        invite_friend.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                //Intent myIntent = new Intent(view.getContext(), InviteFriendActivity.class);
-                //startActivity(myIntent);
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("message");
-                myRef.setValue("Hello, World!");
-                Snackbar.make(thisView,"kjystkref",0).show();
-            }
-        });
+//        LinearLayout invite_friend = (LinearLayout) thisView.findViewById(R.id.invite_friend);
+//        invite_friend.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                Intent myIntent = new Intent(view.getContext(), InviteFriendActivity.class);
+//                startActivity(myIntent);
+//                FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                DatabaseReference myRef = database.getReference("message");
+//                myRef.setValue("Hello, World!");
+//                Snackbar.make(thisView,"kjystkref",0).show();
+//            }
+//        });
 
 
 
