@@ -19,6 +19,11 @@ package com.sevenhills.fortniteawards.Activities;
         import android.widget.EditText;
         import android.widget.Toast;
 
+        import com.facebook.CallbackManager;
+        import com.facebook.FacebookCallback;
+        import com.facebook.FacebookException;
+        import com.facebook.login.LoginResult;
+        import com.facebook.login.widget.LoginButton;
         import com.google.android.gms.auth.api.Auth;
         import com.google.android.gms.auth.api.signin.GoogleSignIn;
         import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -36,6 +41,11 @@ package com.sevenhills.fortniteawards.Activities;
         import com.google.firebase.auth.FirebaseUser;
         import com.google.firebase.auth.GoogleAuthProvider;
         import com.sevenhills.fortniteawards.R;
+        import com.facebook.FacebookSdk;
+        import com.facebook.appevents.AppEventsLogger;
+
+        import java.util.Arrays;
+        import java.util.Collections;
 
 public class SignIn_Activity extends AppCompatActivity {
 
@@ -46,23 +56,63 @@ public class SignIn_Activity extends AppCompatActivity {
     private int revealX;
     private int revealY;
     View rootLayout;
-    Button google,facebook;
+    Button google;//,facebook;
     FirebaseAuth mAuth;
     GoogleSignInOptions gso;
     GoogleApiClient googleApiClient;
+    private CallbackManager callbackManager;
+
+    private static final String EMAIL = "email";
+    private LoginButton loginButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.sign_in_layout);
+        callbackManager = CallbackManager.Factory.create();
+
+
+
+        loginButton = (LoginButton) findViewById(R.id.login_button);
+        loginButton.setReadPermissions(Collections.singletonList(EMAIL));
+        // If you are using in a fragment, call loginButton.setFragment(this);
+
+        // Callback registration
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                // App code
+                Log.e("FACEBOOK","succed");
+                Toast.makeText(getApplicationContext(),"succ",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(SignIn_Activity.this,MainActivity.class));
+
+
+            }
+
+            @Override
+            public void onCancel() {
+                // App code
+                Toast.makeText(getApplicationContext(),"cancel",Toast.LENGTH_SHORT).show();
+                Log.e("FACEBOOK","cancel");
+            }
+
+            @Override
+            public void onError(FacebookException exception) {
+                // App code
+                Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
+                Log.e("FACEBOOK","error");
+            }
+        });
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_in_layout);
         Intent intent = getIntent();
         mAuth = FirebaseAuth.getInstance();
         rootLayout = findViewById(R.id.root_view_signin);
         google = findViewById(R.id.google_signin);
-        facebook = findViewById(R.id.fb_signin);
+        //facebook = findViewById(R.id.fb_signin);
         revealX = intent.getIntExtra(EXTRA_CIRCULAR_REVEAL_X, 0);
         revealY = intent.getIntExtra(EXTRA_CIRCULAR_REVEAL_Y, 0);
         final EditText email = findViewById(R.id.email_signin);
@@ -71,7 +121,7 @@ public class SignIn_Activity extends AppCompatActivity {
         google.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"uytefk0",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"uytefk0",Toast.LENGTH_SHORT).show();
                 signIn();
             }
         });
@@ -97,14 +147,7 @@ public class SignIn_Activity extends AppCompatActivity {
                 }
             }
         });
-        //signIn();
 
-        facebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
         if (savedInstanceState == null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
                 //intent.hasExtra(EXTRA_CIRCULAR_REVEAL_X) &&
                 //intent.hasExtra(EXTRA_CIRCULAR_REVEAL_Y)

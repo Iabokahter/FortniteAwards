@@ -5,6 +5,9 @@
     <string name="login">Sign in</string>
     <string name="signup">sign up</string>
 
+    <string name="facebook_app_id">369346203869031</string>
+    <string name="fb_login_protocol_scheme">fb369346203869031</string>
+
     <!-- For Sign-Up Layout-->
     <string name="full_name">Full Name</string>
     <string name="email">Email</string>
