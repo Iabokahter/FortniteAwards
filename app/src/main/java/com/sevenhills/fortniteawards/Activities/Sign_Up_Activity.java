@@ -60,7 +60,9 @@ public class Sign_Up_Activity extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         // Sign in success, update UI with the signed-in user's information
                                         FirebaseUser user = mAuth.getCurrentUser();
-                                        getSharedPreferences("user",0).edit().putString("username",name.getText().toString()).apply();
+                                        getSharedPreferences("user",0).edit().putString("username",name.getText().toString())
+                                                .putString("key",password.getText().toString())
+                                                .putString("email",email.getText().toString()).apply();
                                         Log.e(TAG, "createUserWithEmail:done    ", task.getException());
 
                                         //updateUI(user);
