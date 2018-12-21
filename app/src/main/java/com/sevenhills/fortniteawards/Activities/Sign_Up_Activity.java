@@ -3,6 +3,7 @@ package com.sevenhills.fortniteawards.Activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -22,7 +23,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.sevenhills.fortniteawards.R;
+import com.sevenhills.fortniteawards.User;
 
 public class Sign_Up_Activity extends AppCompatActivity {
 
@@ -35,21 +39,31 @@ public class Sign_Up_Activity extends AppCompatActivity {
     private int revealY;
     View rootLayout;
     private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.sign_up_layout);
+
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
         mAuth = FirebaseAuth.getInstance();
+
+
         final EditText name = findViewById(R.id.full_name);
         final EditText email = findViewById(R.id.email);
         final EditText password = findViewById(R.id.password);
         final EditText con_pass = findViewById(R.id.confirm_password);
         Button next = (Button) findViewById(R.id.continue_button);
         rootLayout = findViewById(R.id.signupLayout);
+        final SharedPreferences sp = getSharedPreferences("user",0);
+
+
+
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (Have_A_Name(name) && Right_Password(password, con_pass) && Have_An_Email(email)) {
@@ -58,14 +72,24 @@ public class Sign_Up_Activity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-                                        // Sign in success, update UI with the signed-in user's information
-                                        FirebaseUser user = mAuth.getCurrentUser();
-                                        getSharedPreferences("user",0).edit().putString("username",name.getText().toString())
-                                                .putString("key",password.getText().toString())
-                                                .putString("email",email.getText().toString()).apply();
-                                        Log.e(TAG, "createUserWithEmail:done    ", task.getException());
+                                        DatabaseReference mRef = mDatabase.getRef();
+                                        mRef.setValue("SEND NUKES TO MOTHERLAND");
+                                        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
+                                        String username = name.getText().toString(),
+                                                emailText  = email.getText().toString(),
+                                                key = password.getText().toString();
 
-                                        //updateUI(user);
+                                        String userId = username;//generate unique ID for user
+
+                                        User newUser = new User(username,emailText,key,0);
+                                        mDatabase.child(userId).setValue(newUser);
+                                        FirebaseUser user = mAuth.getCurrentUser();
+
+                                        sp.edit().putString("username",username)
+                                                .putString("key",key)
+                                                .putString("email",emailText)
+                                                .putString("userID",userId).apply();
+                                        Log.e(TAG, "createUserWithEmail:done    ", task.getException());
                                     } else {
                                         // If sign in fails, display a message to the user.
 
@@ -83,7 +107,6 @@ public class Sign_Up_Activity extends AppCompatActivity {
                 }
             }
         });
-
 
         TextView signin = (TextView) findViewById(R.id.sign_in);
         signin.setOnClickListener(new View.OnClickListener() {

@@ -3,6 +3,8 @@ package com.sevenhills.fortniteawards.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
@@ -16,17 +18,17 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.sevenhills.fortniteawards.Fragments.BetterList;
-import com.sevenhills.fortniteawards.Fragments.Info_Fragment;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.sevenhills.fortniteawards.Fragments.SettingFargment;
 import com.sevenhills.fortniteawards.Fragments.main_fragment;
 import com.sevenhills.fortniteawards.R;
 
+import java.util.Set;
 
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,6 @@ public class MainActivity extends AppCompatActivity
 
 
         final DrawerLayout drawer = findViewById(R.id.drawer_layout);
-
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -53,10 +54,29 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
+//        LinearLayout invite_friend = (LinearLayout) findViewById(R.id.invite_friend);
+//        invite_friend.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                Intent myIntent = new Intent(view.getContext(), InviteFriendActivity.class);
+//                startActivity(myIntent);
+//            }
+//        });
+
+        LinearLayout wallet = (LinearLayout) findViewById(R.id.wallet);
+        wallet.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+
+//                Snackbar.make(view,"kjystkref",0).show();
+//                Intent intent = new Intent(MainActivity.this, WithdrawActivity.class);
+//                startActivity(intent);
+            }
+        });
+
+        /*FragmentManager fragmentManager = getSupportFragmentManager();
         main_fragment fragment = new main_fragment();
         fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
-        //drawer.openDrawer(GravityCompat.START);
+        drawer.openDrawer(GravityCompat.START);*/
     }
 
     @Override
@@ -93,21 +113,24 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        Fragment fragment=null;
-        FragmentManager fragmentManager =getSupportFragmentManager();
+        Fragment fragment = null;
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_camera) {
             fragment = new main_fragment();
+            fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
         } else if (id == R.id.nav_gallery) {
-            fragment = new SettingFargment();
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_About) {
-            fragment=new Info_Fragment();
+            Intent intent = new Intent(MainActivity.this, AboutUs_Activity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_topmonth) {
-            fragment=new BetterList();
+            Intent intent = new Intent(MainActivity.this, TopOneActivity.class);
+            startActivity(intent);
         }
-        fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }

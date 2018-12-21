@@ -85,6 +85,7 @@ public class SignIn_Activity extends AppCompatActivity {
                     // App code
                     Log.e("FACEBOOK","succed");
                     Toast.makeText(getApplicationContext(),"succ",Toast.LENGTH_SHORT).show();
+
                     GotoMainActivity();
 
 
@@ -146,9 +147,15 @@ public class SignIn_Activity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         // Sign in success, update UI with the signed-in user's information
+
                                         Log.d(TAG, "signInWithEmail:success");
                                         FirebaseUser user = mAuth.getCurrentUser();
-                                        sp.edit().putString("username",user.getDisplayName()).apply();
+
+                                        //sp.edit().putString("username",user.getDisplayName()).apply();
+                                        sp.edit().putString("username",user.getDisplayName())
+                                                .putString("key","GOOGLE")
+                                                .putString("email",user.getEmail())
+                                                .putString("userID","BLAH").apply();
                                         GotoMainActivity();
                                         //updateUI(user);
                                     } else {
