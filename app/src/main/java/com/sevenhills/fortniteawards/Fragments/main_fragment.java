@@ -3,6 +3,7 @@ package com.sevenhills.fortniteawards.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.sevenhills.fortniteawards.Activities.InviteFriendActivity;
 import com.sevenhills.fortniteawards.Activities.WithdrawActivity;
 import com.sevenhills.fortniteawards.R;
@@ -25,13 +28,17 @@ public class main_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View thisView  = inflater.inflate(R.layout.main_fragment, container, false);
-//
+        final View thisView  = inflater.inflate(R.layout.main_fragment, container, false);
+
         LinearLayout invite_friend = (LinearLayout) thisView.findViewById(R.id.invite_friend);
         invite_friend.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), InviteFriendActivity.class);
-                startActivity(myIntent);
+                //Intent myIntent = new Intent(view.getContext(), InviteFriendActivity.class);
+                //startActivity(myIntent);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("message");
+                myRef.setValue("Hello, World!");
+                Snackbar.make(thisView,"kjystkref",0).show();
             }
         });
 

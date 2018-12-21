@@ -3,6 +3,8 @@
     xmlns:xmlms="http://schemas.android.com/apk/res/android">
     <corners xmlms:radius="40dp"/>
     <solid xmlms:color="@android:color/white"/>
+    <stroke xmlms:width="10dp" xmlms:color="@color/colorPrimary"/>
+
     <padding xmlms:top="12dp" xmlms:right="15dp" xmlms:left="15dp" xmlms:bottom="12dp"/>
 
 

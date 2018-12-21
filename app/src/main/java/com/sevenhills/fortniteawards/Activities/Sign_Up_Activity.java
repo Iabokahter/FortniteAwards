@@ -17,8 +17,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -43,6 +41,7 @@ public class Sign_Up_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.sign_up_layout);
         mAuth = FirebaseAuth.getInstance();
         final EditText name = findViewById(R.id.full_name);
@@ -53,7 +52,7 @@ public class Sign_Up_Activity extends AppCompatActivity {
         rootLayout = findViewById(R.id.signupLayout);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                if (Have_A_Name(name) && Have_An_Email(email) && Right_Password(password, con_pass)) {
+                if (Have_A_Name(name) && Right_Password(password, con_pass) && Have_An_Email(email)) {
                     mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                             .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                                 @Override
@@ -61,6 +60,7 @@ public class Sign_Up_Activity extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         // Sign in success, update UI with the signed-in user's information
                                         FirebaseUser user = mAuth.getCurrentUser();
+                                        getSharedPreferences("user",0).edit().putString("username",name.getText().toString()).apply();
                                         Log.e(TAG, "createUserWithEmail:done    ", task.getException());
 
                                         //updateUI(user);
