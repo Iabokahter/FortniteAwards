@@ -19,12 +19,12 @@ package com.sevenhills.fortniteawards.Activities;
         import android.widget.Button;
         import android.widget.EditText;
         import android.widget.Toast;
-
-        import com.facebook.CallbackManager;
-        import com.facebook.FacebookCallback;
-        import com.facebook.FacebookException;
-        import com.facebook.login.LoginResult;
-        import com.facebook.login.widget.LoginButton;
+//
+//        import com.facebook.CallbackManager;
+//        import com.facebook.FacebookCallback;
+//        import com.facebook.FacebookException;
+//        import com.facebook.login.LoginResult;
+//        import com.facebook.login.widget.LoginButton;
         import com.google.android.gms.auth.api.Auth;
         import com.google.android.gms.auth.api.signin.GoogleSignIn;
         import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -45,8 +45,8 @@ package com.sevenhills.fortniteawards.Activities;
         import com.google.firebase.database.DatabaseReference;
         import com.google.firebase.database.FirebaseDatabase;
         import com.sevenhills.fortniteawards.R;
-        import com.facebook.FacebookSdk;
-        import com.facebook.appevents.AppEventsLogger;
+//        import com.facebook.FacebookSdk;
+//        import com.facebook.appevents.AppEventsLogger;
         import com.sevenhills.fortniteawards.User;
 
         import java.util.Arrays;
@@ -66,10 +66,10 @@ public class SignIn_Activity extends AppCompatActivity {
     FirebaseAuth mAuth;
     GoogleSignInOptions gso;
     GoogleApiClient googleApiClient;
-    private CallbackManager callbackManager;
+    //private CallbackManager callbackManager;
 
     private static final String EMAIL = "email";
-    private LoginButton loginButton;
+   // private LoginButton loginButton;
     private DatabaseReference mDatabase;
 
     @Override
@@ -77,39 +77,39 @@ public class SignIn_Activity extends AppCompatActivity {
         sp = getSharedPreferences("user",0);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_in_layout);
-        callbackManager = CallbackManager.Factory.create();
+        //callbackManager = CallbackManager.Factory.create();
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        loginButton = (LoginButton) findViewById(R.id.login_button);
-        loginButton.setReadPermissions(Collections.singletonList(EMAIL));
-
-            // Callback registration
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-                @Override
-                public void onSuccess(LoginResult loginResult) {
-                    // App code
-                    Log.e("FACEBOOK","succed");
-                    Toast.makeText(getApplicationContext(),"succ",Toast.LENGTH_SHORT).show();
-
-                    GotoMainActivity();
-
-
-                }
-
-                @Override
-                public void onCancel() {
-                    // App code
-                    Toast.makeText(getApplicationContext(),"cancel",Toast.LENGTH_SHORT).show();
-                    Log.e("FACEBOOK","cancel");
-                }
-
-                @Override
-                public void onError(FacebookException exception) {
-                    // App code
-                    Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
-                    Log.e("FACEBOOK","error");
-                }
-            });
+//        loginButton = (LoginButton) findViewById(R.id.login_button);
+//        loginButton.setReadPermissions(Collections.singletonList(EMAIL));
+//
+//            // Callback registration
+//        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+//                @Override
+//                public void onSuccess(LoginResult loginResult) {
+//                    // App code
+//                    Log.e("FACEBOOK","succed");
+//                    Toast.makeText(getApplicationContext(),"succ",Toast.LENGTH_SHORT).show();
+//
+//                    GotoMainActivity();
+//
+//
+//                }
+//
+//                @Override
+//                public void onCancel() {
+//                    // App code
+//                    Toast.makeText(getApplicationContext(),"cancel",Toast.LENGTH_SHORT).show();
+//                    Log.e("FACEBOOK","cancel");
+//                }
+//
+//                @Override
+//                public void onError(FacebookException exception) {
+//                    // App code
+//                    Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
+//                    Log.e("FACEBOOK","error");
+//                }
+//            });
             gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                     .requestIdToken(getString(R.string.default_web_client_id))
                     .requestEmail()

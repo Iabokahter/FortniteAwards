@@ -173,21 +173,6 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/viewmodel/1.1.0/e4c0c5d65f92ccad0b0148ac2f01b540ac7a711e/viewmodel-1.1.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: com.android.support.constraint:constraint-layout-1.1.3">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b1cf5a4cc1052f1770bd5ebcc39f847f/jars/classes.jar!/" />
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b1cf5a4cc1052f1770bd5ebcc39f847f/res" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
-    <library name="Gradle: com.android.support.constraint:constraint-layout-solver:1.1.3@jar">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support.constraint/constraint-layout-solver/1.1.3/bde0667d7414c16ed62d3cfe993cff7f9d732373/constraint-layout-solver-1.1.3.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
     <library name="Gradle: com.android.support.test.espresso:espresso-core-3.0.2">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/espresso-core-3.0.2.aar/73901f13522c5b5cb089d4d495b89564/jars/classes.jar!/" />
@@ -248,24 +233,14 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: com.android.support:cardview-v7-27.1.1">
+    <library name="Gradle: com.android.support:customtabs-26.1.0">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/843a3dfa39d161d619636c545215cf5a/jars/classes.jar!/" />
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/843a3dfa39d161d619636c545215cf5a/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/customtabs-26.1.0.aar/e64432850c5963e3f121b2159fdc07de/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/customtabs-26.1.0.aar/e64432850c5963e3f121b2159fdc07de/res" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/cardview-v7/27.1.1/8300d225b205b04e22ec475cb412bd3621911d3/cardview-v7-27.1.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.android.support:customtabs-27.0.2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/2b2114f83ce86122dd2120d19dd09084/jars/classes.jar!/" />
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/customtabs-27.0.2.aar/2b2114f83ce86122dd2120d19dd09084/res" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/customtabs/27.0.2/32ca2a7e34a4796c84d57234eecb3a4928842689/customtabs-27.0.2-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/customtabs/26.1.0/fc3c2c5fd86e4c7bced338c640762c0a9a7ac1e/customtabs-26.1.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: com.android.support:design-27.1.1">
@@ -276,16 +251,6 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/design/27.1.1/6e10c7f954f63690f7846fb22352375cf1b9fbb4/design-27.1.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.android.support:gridlayout-v7-27.1.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-27.1.1.aar/2237d73e58ee6d13be5aa7c3258002e7/jars/classes.jar!/" />
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-27.1.1.aar/2237d73e58ee6d13be5aa7c3258002e7/res" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/gridlayout-v7/27.1.1/a3b11bab701ea5e89909a158405f03b4ff028611/gridlayout-v7-27.1.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: com.android.support:recyclerview-v7-27.1.1">
@@ -387,100 +352,34 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/transition/27.1.1/88ebe6765790253d410e51a3952571565f2040e9/transition-27.1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Gradle: com.facebook.android:facebook-android-sdk-4.38.1">
+    <library name="Gradle: com.google.android.gms:play-services-ads-17.1.0">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.38.1.aar/87d133bd89038fd6eed93b346f4d4f2e/jars/classes.jar!/" />
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.38.1.aar/87d133bd89038fd6eed93b346f4d4f2e/res" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-17.1.0.aar/9a781abe47230f2e27277f1b3398f7e8/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-17.1.0.aar/9a781abe47230f2e27277f1b3398f7e8/jars/classes.jar!/" />
       </CLASSES>
       <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-android-sdk/4.38.1/717bff16fea6fb7c2cf0b352d1274ce2865b1573/facebook-android-sdk-4.38.1-sources.jar!/" />
-      </SOURCES>
+      <SOURCES />
     </library>
-    <library name="Gradle: com.facebook.android:facebook-applinks-4.38.1">
+    <library name="Gradle: com.google.android.gms:play-services-ads-base-17.1.0">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.38.1.aar/c87d2a50b8e3200376a0bf37f5be97c5/jars/classes.jar!/" />
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-applinks-4.38.1.aar/c87d2a50b8e3200376a0bf37f5be97c5/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-base-17.1.0.aar/5f452d6d91a7f11eebe4859888a951f2/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-base-17.1.0.aar/5f452d6d91a7f11eebe4859888a951f2/res" />
       </CLASSES>
       <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-applinks/4.38.1/b2def24ea252ff31d5bf44ddc45903fb69446dea/facebook-applinks-4.38.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.facebook.android:facebook-common-4.38.1">
-      <CLASSES>
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-common-4.38.1.aar/c7ed39c6041e83f5853b61c6e3714fd9/res" />
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-common-4.38.1.aar/c7ed39c6041e83f5853b61c6e3714fd9/jars/classes.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-common/4.38.1/7308b87b27e7061d1affe383b035229e944ef450/facebook-common-4.38.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.facebook.android:facebook-core-4.38.1">
-      <CLASSES>
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-core-4.38.1.aar/8fb92801d189ec8e2803a877234ed6a6/res" />
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-core-4.38.1.aar/8fb92801d189ec8e2803a877234ed6a6/jars/classes.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-core/4.38.1/c7793eca4e6f2ccd455975d0fdbe33aa65447715/facebook-core-4.38.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.facebook.android:facebook-login-4.38.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-login-4.38.1.aar/523a6ae4e20b7ed1c9af6cd064798854/jars/classes.jar!/" />
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-login-4.38.1.aar/523a6ae4e20b7ed1c9af6cd064798854/res" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-login/4.38.1/e53d2fe10f7fd8be741753d21d39f753dfd4c8e6/facebook-login-4.38.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.facebook.android:facebook-marketing-4.38.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-marketing-4.38.1.aar/dee9b3d2b2aacc4f7507dc91d451ccc4/jars/classes.jar!/" />
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-marketing-4.38.1.aar/dee9b3d2b2aacc4f7507dc91d451ccc4/res" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-marketing/4.38.1/5248b3b43f64bd7aca19c7fc11a9e4ba521b9977/facebook-marketing-4.38.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.facebook.android:facebook-messenger-4.38.1">
-      <CLASSES>
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.38.1.aar/1fe45dd85afe2fcdc0bf0b02dc48057e/res" />
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-messenger-4.38.1.aar/1fe45dd85afe2fcdc0bf0b02dc48057e/jars/classes.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-messenger/4.38.1/b4ed229c7450413d75f40da5fc0a57f9af396b94/facebook-messenger-4.38.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.facebook.android:facebook-places-4.38.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-places-4.38.1.aar/45c0486b5935ee14e636407b05ac57ed/jars/classes.jar!/" />
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-places-4.38.1.aar/45c0486b5935ee14e636407b05ac57ed/res" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-places/4.38.1/c7169d1c7fbf01dc680982c5cc3fda0b7802cf4/facebook-places-4.38.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.facebook.android:facebook-share-4.38.1">
-      <CLASSES>
-        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-share-4.38.1.aar/849652c21723570113acb6a925746ec4/res" />
-        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-share-4.38.1.aar/849652c21723570113acb6a925746ec4/jars/classes.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-share/4.38.1/2cbe1a2d13f2ad012d1cb5c317683b9f8eb4bd85/facebook-share-4.38.1-sources.jar!/" />
-      </SOURCES>
+      <SOURCES />
     </library>
     <library name="Gradle: com.google.android.gms:play-services-ads-identifier-16.0.0">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/c61dc000532d3282fcac82e6754816bc/jars/classes.jar!/" />
         <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-16.0.0.aar/c61dc000532d3282fcac82e6754816bc/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.android.gms:play-services-ads-lite-17.1.0">
+      <CLASSES>
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.0.aar/e7ffd4b039dbde7037844698c2b7768e/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-17.1.0.aar/e7ffd4b039dbde7037844698c2b7768e/jars/classes.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -535,6 +434,14 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="Gradle: com.google.android.gms:play-services-gass-17.1.0">
+      <CLASSES>
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-gass-17.1.0.aar/cb90fdb697a08704ed9643ce919e1889/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-gass-17.1.0.aar/cb90fdb697a08704ed9643ce919e1889/jars/classes.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="Gradle: com.google.android.gms:play-services-measurement-api-16.0.2">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-measurement-api-16.0.2.aar/deee90beb2713c4e974a78b900fe9c10/jars/classes.jar!/" />
@@ -547,6 +454,14 @@
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.3.aar/dbf12cf07ebd7076d36546120c7e4026/jars/classes.jar!/" />
         <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.3.aar/dbf12cf07ebd7076d36546120c7e4026/res" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.android.gms:play-services-measurement-sdk-api-16.0.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.2.aar/c751f58f6706a4c8fb418112fec7b07d/jars/classes.jar!/" />
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-measurement-sdk-api-16.0.2.aar/c751f58f6706a4c8fb418112fec7b07d/res" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -570,6 +485,14 @@
     <library name="Gradle: com.google.code.findbugs:jsr305:2.0.1@jar">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: com.google.firebase:firebase-ads-17.1.0">
+      <CLASSES>
+        <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-ads-17.1.0.aar/024bb85b76a0a10158ddd06b18a09457/res" />
+        <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-ads-17.1.0.aar/024bb85b76a0a10158ddd06b18a09457/jars/classes.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -677,42 +600,6 @@
       </CLASSES>
       <JAVADOC />
       <SOURCES />
-    </library>
-    <library name="Gradle: com.google.zxing:core:3.3.0@jar">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/73c49077166faa4c3c0059c5f583d1d7bd1475fe/core-3.3.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.3.0/39d966e052e28fc7d83793b02e0af97ccf955745/core-3.3.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.parse.bolts:bolts-android:1.4.0@jar">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.4.0/cc174c559b5177982887bf6e1b76003aebad9516/bolts-android-1.4.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.4.0/a1942c5e480d86987076fbaae8d2403b0c70927d/bolts-android-1.4.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.parse.bolts:bolts-applinks:1.4.0@jar">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/7b0b0d485f566cd1b70d7d4ea20bf3620af71c1c/bolts-applinks-1.4.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.parse.bolts:bolts-tasks:1.4.0@jar">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/a523a9722ec97e8fc4f015dd50c98cdda8029ba4/bolts-tasks-1.4.0-sources.jar!/" />
-      </SOURCES>
     </library>
     <library name="Gradle: com.squareup:javawriter:2.1.1@jar">
       <CLASSES>

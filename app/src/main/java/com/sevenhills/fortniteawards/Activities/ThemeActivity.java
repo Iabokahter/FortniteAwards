@@ -19,8 +19,8 @@ public class ThemeActivity extends AppCompatActivity {
         ImageView back = (ImageView) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), SettingsActivity.class);
-                startActivity(myIntent);
+//                Intent myIntent = new Intent(view.getContext(), SettingsActivity.class);
+//                startActivity(myIntent);
             }
         });
 

@@ -1,10 +1,7 @@
 package com.sevenhills.fortniteawards.Activities;
 
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
@@ -23,13 +20,12 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.sevenhills.fortniteawards.Fragments.BetterList;
+import com.sevenhills.fortniteawards.Fragments.Info_Fragment;
 import com.sevenhills.fortniteawards.Fragments.SettingFargment;
 import com.sevenhills.fortniteawards.Fragments.main_fragment;
 import com.sevenhills.fortniteawards.R;
 
-import java.util.Set;
 
 
 public class MainActivity extends AppCompatActivity
@@ -132,25 +128,23 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         Fragment fragment = null;
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_camera) {
             fragment = new main_fragment();
-            fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
+
         } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(intent);
+            fragment = new SettingFargment();
+
         } else if (id == R.id.nav_About) {
-            Intent intent = new Intent(MainActivity.this, AboutUs_Activity.class);
-            startActivity(intent);
+            fragment = new Info_Fragment();
         } else if (id == R.id.nav_topmonth) {
-            Intent intent = new Intent(MainActivity.this, TopOneActivity.class);
-            startActivity(intent);
+            fragment = new BetterList();
         }
+        fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
