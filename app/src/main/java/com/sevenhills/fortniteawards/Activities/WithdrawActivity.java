@@ -35,8 +35,9 @@ public class WithdrawActivity extends AppCompatActivity implements View.OnClickL
         ImageView back = (ImageView) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
-                startActivity(myIntent);
+                onBackPressed();
+                //Intent myIntent = new Intent(view.getContext(), MainActivity.class);
+                //startActivity(myIntent);
             }
         });
 

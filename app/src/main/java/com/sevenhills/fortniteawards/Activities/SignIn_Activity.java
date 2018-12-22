@@ -41,12 +41,17 @@ package com.sevenhills.fortniteawards.Activities;
         import com.google.firebase.auth.FirebaseAuth;
         import com.google.firebase.auth.FirebaseUser;
         import com.google.firebase.auth.GoogleAuthProvider;
+        import com.google.firebase.database.DataSnapshot;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
         import com.sevenhills.fortniteawards.R;
         import com.facebook.FacebookSdk;
         import com.facebook.appevents.AppEventsLogger;
+        import com.sevenhills.fortniteawards.User;
 
         import java.util.Arrays;
         import java.util.Collections;
+
 
 public class SignIn_Activity extends AppCompatActivity {
     SharedPreferences sp;
@@ -65,6 +70,7 @@ public class SignIn_Activity extends AppCompatActivity {
 
     private static final String EMAIL = "email";
     private LoginButton loginButton;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,8 +79,7 @@ public class SignIn_Activity extends AppCompatActivity {
         setContentView(R.layout.sign_in_layout);
         callbackManager = CallbackManager.Factory.create();
 
-
-
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions(Collections.singletonList(EMAIL));
 
@@ -294,9 +299,103 @@ public class SignIn_Activity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+
+                            /*
+                                  .____. ليش هيك
+  (
+   )
+  (
+   )
+  (
+   xuu$``$$$uuu.
+ . $``$  $$$`$$$
+dP*$  $  $$$ $$$
+?k $  $  $$$ $$$
+ $ $  $  $$$ $$$
+ ":$  $  $$$ $$$
+  N$  $  $$$ $$$
+  $$  $  $$$ $$$
+   $  $  $$$ $$$
+   $  $  $$$ $$$
+   $  $  $$$ $$$
+   $  $  $$$ $$$
+   $  $  $$$ $$$
+   $$#$  $$$ $$$
+   $$'$  $$$ $$$
+   $$`R  $$$ $$$
+   $$$&  $$$ $$$
+   $#*$  $$$ $$$
+   $  $  $$$ @$$
+   $  $  $$$ $$$
+   $  $  $$$ $$$
+   $  $  $B$ $$&.
+   $  $  $D$ $$$$$muL.
+   $  $  $Q$ $$$$$  `"**mu..
+   $  $  $R$ $$$$$    k  `$$*t
+   $  @  $$$ $$$$$    k   $$!4
+   $ x$uu@B8u$NB@$uuuu6...$$X?
+   $ $(`RF`$`````R$ $$5`"""#"R
+   $ $" M$ $     $$ $$$      ?
+   $ $  ?$ $     T$ $$$      $
+   $ $F H$ $     M$ $$K      $  ..
+   $ $L $$ $     $$ $$R.     "d$$$$Ns.
+   $ $~ $$ $     N$ $$X      ."    "%2h
+   $ 4k f  $     *$ $$&      R       "iN
+   $ $$ %uz!     tuuR$$:     Buu      ?`:
+   $ $F          $??$8B      | '*Ned*$~L$
+   $ $k          $'@$$$      |$.suu+!' !$
+   $ ?N          $'$$@$      $*`      d:"
+   $ dL..........M.$&$$      5       d"P
+ ..$.^"*I$RR*$C""??77*?      "nu...n*L*
+'$C"R   ``""!$*@#""` .uor    bu8BUU+!`
+'*@m@.       *d"     *$Rouxxd"```$                 هاي مسكة الاصبع الصغير
+     R*@mu.           "#$R *$    !                   |
+     *%x. "*L               $     %.                 |
+        "N  `%.      ...u.d!` ..ue$$$o..             V
+         @    ".    $*"""" .u$$$$$$$$$$$$beu...
+        8  .mL %  :R`     x$$$$$$$$$$$$$$$$$$$$$$$$WaseeMCACA
+       |$e!" "s:k 4      d$N"`"#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+       $$      "N @      $?$    F$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+       $@       ^%Uu..   R#8buu$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                  ```""*u$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                         #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                          "5$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                            `*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                              ^#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                                 "*$$$$$$$$$$$$$$$$$$$$$$$$$$>
+                                   `"*$$$$$$$$$$$$$$$$$$$$$$$>
+                                       ^!$$$$$$$$$$$$$$$$$$$$>
+                                           `"#+$$$$$$$$$$$$$$>
+                                                 ""**$$$$$$$$>
+                                                        ```""
+                             */
+
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            String userId = user.getUid();
+                            String email = user.getEmail();
+                            String userName = user.getDisplayName();
+                            Log.e("AUTH","is first time google " + task.getResult().getAdditionalUserInfo().isNewUser());
+
+
+                            /*  //////////**** IS FIRST TIME \\\\\\\\\\\\\\\\\\     */
+
+                            if (task.getResult().getAdditionalUserInfo().isNewUser()) {
+
+
+                                DatabaseReference mRef = mDatabase.getRef();
+                                mRef.setValue("SEND NUKES TO MOTHERLAND");
+                                DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
+
+                                User newUser = new User(userId, email, "GOOGLE AUTH", 5);
+                                mDatabase.child(userId).setValue(newUser);
+                            }
+
+                            sp.edit().putString("username",userName)
+                                    .putString("key","MADAFAKA GOOGLE")
+                                    .putString("email",email)
+                                    .putString("userID",userId).apply();
+
                             GotoMainActivity();
                         } else {
                             // If sign in fails, display a message to the user.

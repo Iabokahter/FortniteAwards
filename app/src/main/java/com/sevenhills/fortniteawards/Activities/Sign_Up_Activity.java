@@ -50,7 +50,6 @@ public class Sign_Up_Activity extends AppCompatActivity {
 
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -74,24 +73,23 @@ public class Sign_Up_Activity extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         DatabaseReference mRef = mDatabase.getRef();
                                         mRef.setValue("SEND NUKES TO MOTHERLAND");
+
                                         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
                                         String username = name.getText().toString(),
                                                 emailText  = email.getText().toString(),
                                                 key = password.getText().toString();
 
-                                        String userId = username;//generate unique ID for user
 
                                         User newUser = new User(username,emailText,key,0);
-                                        mDatabase.child(userId).setValue(newUser);
+                                        mDatabase.child(username).setValue(newUser);
                                         FirebaseUser user = mAuth.getCurrentUser();
 
                                         sp.edit().putString("username",username)
                                                 .putString("key",key)
                                                 .putString("email",emailText)
-                                                .putString("userID",userId).apply();
+                                                .putString("userID",username).apply();
                                         Log.e(TAG, "createUserWithEmail:done    ", task.getException());
                                     } else {
-                                        // If sign in fails, display a message to the user.
 
                                         Log.e(TAG, "createUserWithEmail:failure", task.getException());
                                         Toast.makeText(getApplicationContext(), "Authentication failed.",

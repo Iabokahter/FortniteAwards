@@ -91,6 +91,8 @@ public class SplashScreenActivity extends AppCompatActivity {
         int revealY = (int) (logIn.getTranslationY() + view.getHeight() / 2);
 
         Intent intent = new Intent(this, activity == gotoActivity.signIn ? SignIn_Activity.class : Sign_Up_Activity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
         intent.putExtra(SignIn_Activity.EXTRA_CIRCULAR_REVEAL_X, revealX);
         intent.putExtra(SignIn_Activity.EXTRA_CIRCULAR_REVEAL_Y, revealY);
         // intent.putExtra(SignIn_Activity.EXTRA_C)
