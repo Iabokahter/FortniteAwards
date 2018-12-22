@@ -33,11 +33,16 @@ import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
+import com.tapjoy.TJActionRequest;
 import com.tapjoy.TJConnectListener;
+import com.tapjoy.TJError;
+import com.tapjoy.TJPlacement;
+import com.tapjoy.TJPlacementListener;
 import com.tapjoy.Tapjoy;
 
 import java.util.Hashtable;
 import com.sevenhills.fortniteawards.User;
+import com.tapjoy.TapjoyConnectFlag;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -52,6 +57,18 @@ public class main_fragment extends Fragment implements RewardedVideoAdListener {
     SharedPreferences sp;
 
     @Override
+    public void onStart() {
+
+        Tapjoy.onActivityStart(getActivity());
+        super.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        Tapjoy.onActivityStop(getActivity());
+        super.onStop();
+    }
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         sp = getActivity().getSharedPreferences("user", 0);
@@ -60,14 +77,65 @@ public class main_fragment extends Fragment implements RewardedVideoAdListener {
         boolean firstTime = true;
         final TextView Points;
 
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+//        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
         final String SDKKey = "ZbzFPWjAT82xnWp0t0HvQQEC1bAvhb53ruxs3N5O7AilJYH487e0sSTqScxe";
+        Hashtable<String, Object> connectFlags = new Hashtable<String, Object>();
+        connectFlags.put(TapjoyConnectFlag.ENABLE_LOGGING, "true");      // remember to turn this off for your production builds!
+        Tapjoy.setDebugEnabled(true);
 
-        Tapjoy.connect(getContext(), SDKKey, new Hashtable(), new TJConnectListener() {
+        Tapjoy.connect(getContext(), SDKKey, connectFlags, new TJConnectListener() {
             @Override
             public void onConnectSuccess() {
                 Log.e("TAPJOY", "succ");
+
+                TJPlacement p = new TJPlacement(getContext(), "GetApp",
+                        new TJPlacementListener() {
+                    @Override
+                    public void onRequestSuccess(TJPlacement tjPlacement) {
+                        Log.i("TAP JOY PLACMENT", "SCUUKKKK");
+                    }
+
+                    @Override
+                    public void onRequestFailure(TJPlacement tjPlacement, TJError tjError) {
+
+                        Log.i("TAP JOY PLACMENT", "fail");
+
+                    }
+
+                    @Override
+                    public void onContentReady(TJPlacement tjPlacement) {
+                        Log.i("TAP JOY PLACMENT", "ready");
+
+
+                    }
+
+                    @Override
+                    public void onContentShow(TJPlacement tjPlacement) {
+                        Log.i("TAP JOY PLACMENT", "show OK");
+
+                    }
+
+                    @Override
+                    public void onContentDismiss(TJPlacement tjPlacement) {
+                        Log.i("TAP JOY PLACMENT", "diss miss");
+
+
+                    }
+
+                    @Override
+                    public void onPurchaseRequest(TJPlacement tjPlacement, TJActionRequest tjActionRequest, String s) {
+                        Log.i("TAP JOY PLACMENT", "بده يشتري");
+
+                    }
+
+                    @Override
+                    public void onRewardRequest(TJPlacement tjPlacement, TJActionRequest tjActionRequest, String s, int i) {
+                        Log.i("TAP JOY PLACMENT", "اخذها");
+
+                    }
+                });
+
             }
 
             @Override
@@ -165,6 +233,15 @@ public class main_fragment extends Fragment implements RewardedVideoAdListener {
             public void onClick(View view) {
                 if (mRewardedVideoAd.isLoaded())
                     mRewardedVideoAd.show();
+            }
+        });
+
+        LinearLayout get_app = thisView.findViewById(R.id.get_app);
+        get_app.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                //What You Want To DO
+
+
             }
         });
 

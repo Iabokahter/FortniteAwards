@@ -65,21 +65,21 @@ public class MainActivity extends AppCompatActivity
 //            }
 //        });
 
-        LinearLayout wallet = (LinearLayout) findViewById(R.id.wallet);
-        wallet.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
+//        LinearLayout wallet = (LinearLayout) findViewById(R.id.wallet);
+//        wallet.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
 
 
 //                Snackbar.make(view,"kjystkref",0).show();
 //                Intent intent = new Intent(MainActivity.this, WithdrawActivity.class);
 //                startActivity(intent);
-            }
-        });
 
-        /*FragmentManager fragmentManager = getSupportFragmentManager();
+
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
         main_fragment fragment = new main_fragment();
         fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
-        drawer.openDrawer(GravityCompat.START);*/
+        //drawer.openDrawer(GravityCompat.START);
     }
 
     private void rewardAds() {
