@@ -3,6 +3,8 @@ package com.sevenhills.fortniteawards.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
@@ -14,12 +16,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.sevenhills.fortniteawards.Fragments.SettingFargment;
 import com.sevenhills.fortniteawards.Fragments.main_fragment;
 import com.sevenhills.fortniteawards.R;
 
+import java.util.Set;
+
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, RewardedVideoAdListener {
+
+    private RewardedVideoAd mRewardedVideoAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,20 +68,36 @@ public class MainActivity extends AppCompatActivity
 //                startActivity(myIntent);
 //            }
 //        });
-//
-//        LinearLayout wallet = (LinearLayout) findViewById(R.id.wallet);
-//        wallet.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-//
-//
-//            }
-//        });
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
+        LinearLayout wallet = (LinearLayout) findViewById(R.id.wallet);
+        wallet.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+
+//                Snackbar.make(view,"kjystkref",0).show();
+//                Intent intent = new Intent(MainActivity.this, WithdrawActivity.class);
+//                startActivity(intent);
+            }
+        });
+
+        /*FragmentManager fragmentManager = getSupportFragmentManager();
         main_fragment fragment = new main_fragment();
         fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
-        //drawer.openDrawer(GravityCompat.START);
+        drawer.openDrawer(GravityCompat.START);*/
     }
+
+    private void rewardAds() {
+        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+        mRewardedVideoAd.setRewardedVideoAdListener(this);
+        loadRewardedVideoAd();
+    }
+
+    private void loadRewardedVideoAd() {
+        mRewardedVideoAd.loadAd("ca-app-pub-4824494878097656/8403117409",//use this id for testing
+                new AdRequest.Builder().build());
+
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -120,5 +152,45 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         }
         return true;
+    }
+
+    @Override
+    public void onRewardedVideoAdLoaded() {
+
+    }
+
+    @Override
+    public void onRewardedVideoAdOpened() {
+
+    }
+
+    @Override
+    public void onRewardedVideoStarted() {
+
+    }
+
+    @Override
+    public void onRewardedVideoAdClosed() {
+
+    }
+
+    @Override
+    public void onRewarded(RewardItem rewardItem) {
+
+    }
+
+    @Override
+    public void onRewardedVideoAdLeftApplication() {
+
+    }
+
+    @Override
+    public void onRewardedVideoAdFailedToLoad(int i) {
+
+    }
+
+    @Override
+    public void onRewardedVideoCompleted() {
+
     }
 }
