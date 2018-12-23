@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="140dp"
         android:transitionName="coin_image"
-        />
+        android:src="@drawable/coins4"/>
 
     <TextView
         android:transitionName="coin_text"

@@ -40,12 +40,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingLeft="24dp"
-            android:layout_marginTop="20dp"
+            android:paddingLeft="28dp"
+            android:layout_marginTop="80dp"
             android:layout_marginBottom="45dp">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/setting_account" />
@@ -60,30 +60,30 @@
                 android:textSize="30sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/theme_activity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="24dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="45dp">
+        <!--<LinearLayout-->
+            <!--android:id="@+id/theme_activity"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingLeft="24dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_marginBottom="45dp">-->
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/setting_theme" />
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:src="@drawable/setting_theme" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="30dp"
-                android:paddingTop="25dp"
-                android:text="@string/theme"
-                android:textColor="@android:color/white"
-                android:textSize="30sp" />
-        </LinearLayout>
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:paddingLeft="30dp"-->
+                <!--android:paddingTop="25dp"-->
+                <!--android:text="@string/theme"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="30sp" />-->
+        <!--</LinearLayout>-->
 
         <LinearLayout
             android:id="@+id/support_activity"

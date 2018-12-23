@@ -136,7 +136,6 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_gallery) {
             fragment = new SettingFargment();
-
         } else if (id == R.id.nav_About) {
             fragment = new Info_Fragment();
         } else if (id == R.id.nav_topmonth) {

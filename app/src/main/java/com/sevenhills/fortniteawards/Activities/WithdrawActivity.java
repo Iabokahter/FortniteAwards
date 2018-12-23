@@ -2,6 +2,7 @@ package com.sevenhills.fortniteawards.Activities;
 
         import android.annotation.SuppressLint;
         import android.content.Intent;
+        import android.content.SharedPreferences;
         import android.support.v4.app.ActivityOptionsCompat;
         import android.support.v4.app.Fragment;
         import android.support.v4.app.FragmentManager;
@@ -36,8 +37,6 @@ public class WithdrawActivity extends AppCompatActivity implements View.OnClickL
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 onBackPressed();
-                //Intent myIntent = new Intent(view.getContext(), MainActivity.class);
-                //startActivity(myIntent);
             }
         });
 
@@ -53,14 +52,26 @@ public class WithdrawActivity extends AppCompatActivity implements View.OnClickL
 //        startActivity(intent, options.toBundle());
     }
 
+
+    //CompleteWithdrawActivity completeWithdrawActivity=new CompleteWithdrawActivity();
+
+
+    SharedPreferences pref = this.getSharedPreferences("PREF_NAME", this.MODE_PRIVATE);
+    SharedPreferences.Editor editor = pref.edit();
+
+
     class VbucksCard {
+
+
 
         View cardView;
         ImageView image;
-        TextView vbucks, pbucks;
+        TextView vbucks;
+        TextView pbucks;
 
         @SuppressLint("SetTextI18n")
         VbucksCard(int id, final int amount) {
+
             cardView = findViewById(id);
             image = cardView.findViewById(R.id.coin_image);
             vbucks = cardView.findViewById(R.id.vbucksAmount);
@@ -74,6 +85,7 @@ public class WithdrawActivity extends AppCompatActivity implements View.OnClickL
 
                     ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(WithdrawActivity.this, p1, p2);
                     startActivity(intent, options.toBundle());
+                    //completeWithdrawActivity.setTransactionItems(cardView,image,vbucks,amount-1);
                 }
             });
             switch (amount) {

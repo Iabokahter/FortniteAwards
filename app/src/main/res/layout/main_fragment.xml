@@ -12,12 +12,14 @@
             android:layout_height="match_parent"
             android:background="@color/purple">
 
-           <!-- <ImageView
+            <ImageView
                 android:id="@+id/navigation"
                 android:layout_width="40dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="22dp"
-                android:src="@drawable/navigation"/>-->
+                android:layout_marginTop="16dp"
+                android:elevation="1000dp"
+                android:src="@drawable/navigation"/>
 
             <TextView
                 android:id="@+id/v_pointText"
